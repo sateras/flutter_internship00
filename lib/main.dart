@@ -1,6 +1,7 @@
 import 'package:app_flutter/send_offer_page.dart';
 import 'package:flutter/material.dart';
 import 'package:app_flutter/request_page.dart';
+import 'package:app_flutter/suggestions_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,7 +41,7 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BottomNavigationBar Example"),
+        title: Text("Example"),
       ),
       body: this.getBody(),
       bottomNavigationBar: BottomNavigationBar(
@@ -111,6 +112,14 @@ class MyEmails extends StatelessWidget {
                 context, MaterialPageRoute(builder: (context) => HomePage()));
           },
           child: Text('Заявка2', style: TextStyle(fontSize: 15)),
+          color: Color.fromARGB(255, 139, 137, 255),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SuggestionsPage()));
+          },
+          child: Text('Заявка3', style: TextStyle(fontSize: 15)),
           color: Color.fromARGB(255, 139, 137, 255),
         ),
       ],
