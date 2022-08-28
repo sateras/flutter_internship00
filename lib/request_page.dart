@@ -204,6 +204,7 @@ class RequestList extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(bottom: 41),
                 padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
@@ -223,11 +224,15 @@ class RequestList extends StatelessWidget {
                             padding: EdgeInsets.only(left: 25),
                             child: Column(
                               children: [
-                                Text(
-                                  'Арман',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18),
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Арман',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                  ],
                                 ),
                                 Row(
                                   children: [
@@ -238,8 +243,15 @@ class RequestList extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                Text('15 отзывов',
-                                    style: TextStyle(fontSize: 16))
+                                Row(
+                                  children: [
+                                    Text('15 отзывов',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(80, 82, 81, 1))),
+                                  ],
+                                )
                               ],
                             ),
                           ),
@@ -261,20 +273,26 @@ class RequestList extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.phone),
+                        Container(
+                            margin: EdgeInsets.only(right: 25),
+                            child: Icon(Icons.phone)),
                         Text('8 775 462 48 71', style: TextStyle(fontSize: 16)),
                       ],
                     ),
                     Row(
                       children: [
-                        Icon(Icons.mail),
+                        Container(
+                            margin: EdgeInsets.only(right: 25),
+                            child: Icon(Icons.mail)),
                         Text('igor.levin.1983@mail.ru',
                             style: TextStyle(fontSize: 16)),
                       ],
                     ),
                     Row(
                       children: [
-                        Icon(Icons.home),
+                        Container(
+                            margin: EdgeInsets.only(right: 25),
+                            child: Icon(Icons.home)),
                         Text('Караганда',
                             style: TextStyle(
                                 fontSize: 16,
@@ -283,7 +301,24 @@ class RequestList extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: FlatButton(
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0)),
+                      height: 56,
+                      onPressed: () {},
+                      child: Text(
+                        'Отправить отсчет',
+                        style: TextStyle(color: Colors.white, fontSize: 22),
+                      ),
+                      color: Color.fromRGBO(74, 160, 7, 1),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ));
