@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:app_flutter/commentaryForTheArtist_component.dart';
 
 class RequestList extends StatelessWidget {
   @override
@@ -33,11 +34,11 @@ class RequestList extends StatelessWidget {
           backgroundColor: Color.fromARGB(254, 241, 241, 241),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(
-              right: 22.0, top: 26, left: 22.0, bottom: 22.0),
+          padding: const EdgeInsets.only(right: 22.0, top: 26, left: 22.0),
           child: ListView(
             children: [
               Container(
+                margin: EdgeInsets.only(bottom: 35),
                 child: Row(
                   children: [
                     Image.asset(
@@ -77,7 +78,7 @@ class RequestList extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 58,
+                margin: EdgeInsets.only(bottom: 16),
                 child: Row(
                   children: [
                     Container(
@@ -179,24 +180,7 @@ class RequestList extends StatelessWidget {
                 ),
               ),
               Divider(color: Color.fromRGBO(196, 196, 196, 1)),
-              Container(
-                height: 58,
-                child: Row(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(right: 19),
-                      child: Icon(Icons.comment),
-                    ),
-                    Expanded(
-                      child: Text(
-                        'Комментарий для исполнителя',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                    Icon(Icons.keyboard_arrow_down)
-                  ],
-                ),
-              ),
+              CommentaryForArtist(),
               Container(
                 margin: EdgeInsets.only(bottom: 41),
                 padding: EdgeInsets.all(12),
@@ -206,81 +190,92 @@ class RequestList extends StatelessWidget {
                         color: Color.fromRGBO(196, 196, 196, 1), width: 2)),
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Image.asset(
-                          'images/person_photo79x79.png',
-                          width: 79,
-                          height: 79,
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: EdgeInsets.only(left: 25),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      'Арман',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(Icons.star),
-                                    Text(
-                                      '4.5',
-                                      style: TextStyle(fontSize: 14),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  children: [
-                                    Text('15 отзывов',
+                    Container(
+                      margin: EdgeInsets.only(bottom: 15),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'images/person_photo79x79.png',
+                            width: 79,
+                            height: 79,
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 25),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Арман',
                                         style: TextStyle(
-                                            fontSize: 16,
-                                            color:
-                                                Color.fromRGBO(80, 82, 81, 1))),
-                                  ],
-                                )
-                              ],
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(Icons.star),
+                                      Text(
+                                        '4.5',
+                                        style: TextStyle(fontSize: 14),
+                                      )
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text('15 отзывов',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              color: Color.fromRGBO(
+                                                  80, 82, 81, 1))),
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                        Column(
-                          textDirection: TextDirection.rtl,
-                          children: [
-                            Text('355',
+                          Column(
+                            textDirection: TextDirection.rtl,
+                            children: [
+                              Text('355',
+                                  textAlign: TextAlign.end,
+                                  style: TextStyle(
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.bold)),
+                              Text(
+                                'Выполненых\n заказов',
                                 textAlign: TextAlign.end,
-                                style: TextStyle(
-                                    fontSize: 36, fontWeight: FontWeight.bold)),
-                            Text(
-                              'Выполненых\n заказов',
-                              textAlign: TextAlign.end,
-                            )
-                          ],
-                        )
-                      ],
+                              )
+                            ],
+                          )
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Container(
-                            margin: EdgeInsets.only(right: 25),
-                            child: Icon(Icons.phone)),
-                        Text('8 775 462 48 71', style: TextStyle(fontSize: 16)),
-                      ],
+                    Container(
+                      margin: EdgeInsets.only(bottom: 11),
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(right: 25),
+                              child: Icon(Icons.phone)),
+                          Text('8 775 462 48 71',
+                              style: TextStyle(fontSize: 16)),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        Container(
-                            margin: EdgeInsets.only(right: 25),
-                            child: Icon(Icons.mail)),
-                        Text('igor.levin.1983@mail.ru',
-                            style: TextStyle(fontSize: 16)),
-                      ],
+                    Container(
+                      margin: EdgeInsets.only(bottom: 11),
+                      child: Row(
+                        children: [
+                          Container(
+                              margin: EdgeInsets.only(right: 25),
+                              child: Icon(Icons.mail)),
+                          Text('igor.levin.1983@mail.ru',
+                              style: TextStyle(fontSize: 16)),
+                        ],
+                      ),
                     ),
                     Row(
                       children: [
