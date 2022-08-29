@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class RequestList extends StatelessWidget {
   @override
@@ -80,11 +81,8 @@ class RequestList extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: 19),
-                      child: Image.asset(
-                        'images/map_mark_icon.png',
-                      ),
-                    ),
+                        margin: EdgeInsets.only(right: 19),
+                        child: SvgPicture.asset('images/map_mark_icon.svg')),
                     Expanded(
                       child: Text(
                         'Город',
@@ -108,8 +106,8 @@ class RequestList extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(right: 19),
-                      child: Image.asset(
-                        'images/fluent_building_icon.png',
+                      child: SvgPicture.asset(
+                        'images/fluent_building_icon.svg',
                       ),
                     ),
                     Expanded(
@@ -135,17 +133,17 @@ class RequestList extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(right: 19),
-                      child: Image.asset(
-                        'images/map_mark_icon.png',
+                      child: SvgPicture.asset(
+                        'images/calendar_icon.svg',
                       ),
                     ),
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         'Дата начала работ',
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
-                    Text(
+                    const Text(
                       '12.07.2022',
                       style: TextStyle(
                           color: Color.fromRGBO(136, 168, 229, 1),
@@ -161,10 +159,8 @@ class RequestList extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: 19),
-                      child: Image.asset(
-                        'images/map_mark_icon.png',
-                      ),
+                      margin: EdgeInsets.only(right: 18),
+                      child: SvgPicture.asset('images/speedcontrol_icon.svg'),
                     ),
                     Expanded(
                       child: Text(
@@ -189,9 +185,7 @@ class RequestList extends StatelessWidget {
                   children: [
                     Container(
                       margin: EdgeInsets.only(right: 19),
-                      child: Image.asset(
-                        'images/map_mark_icon.png',
-                      ),
+                      child: Icon(Icons.comment),
                     ),
                     Expanded(
                       child: Text(

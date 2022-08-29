@@ -1,8 +1,8 @@
-import 'package:app_flutter/send_offer_page.dart';
+import 'package:app_flutter/pages/send_offer_page.dart';
+import 'package:app_flutter/pages/request_page.dart';
+import 'package:app_flutter/pages/suggestions_page.dart';
 import 'package:flutter/material.dart';
-import 'package:app_flutter/request_page.dart';
-import 'package:app_flutter/suggestions_page.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Title of Application',
       theme: ThemeData(
+        fontFamily: 'Roboto',
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),

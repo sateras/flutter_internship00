@@ -33,7 +33,9 @@ class Suggestion extends StatelessWidget {
                             Text(
                               'Арман',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 18),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
                             ),
                           ],
                         ),
@@ -42,7 +44,9 @@ class Suggestion extends StatelessWidget {
                             Icon(Icons.star),
                             Text(
                               '4.5',
-                              style: TextStyle(fontSize: 14),
+                              style: TextStyle(
+                                fontSize: 14,
+                              ),
                             )
                           ],
                         ),
@@ -50,8 +54,9 @@ class Suggestion extends StatelessWidget {
                           children: [
                             Text('15 отзывов',
                                 style: TextStyle(
-                                    fontSize: 16,
-                                    color: Color.fromRGBO(80, 82, 81, 1))),
+                                  fontSize: 16,
+                                  color: Color.fromRGBO(80, 82, 81, 1),
+                                )),
                           ],
                         )
                       ],
@@ -63,7 +68,10 @@ class Suggestion extends StatelessWidget {
                     Text('355',
                         textAlign: TextAlign.end,
                         style: TextStyle(
-                            fontSize: 36, fontWeight: FontWeight.bold)),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Roboto',
+                        )),
                     Text(
                       'Выполненых\n заказов',
                       textAlign: TextAlign.end,
